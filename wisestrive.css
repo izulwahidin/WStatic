@@ -1,0 +1,7 @@
+/* wisestrive css */
+
+.post-thumbnail{
+    width: 100% !important;
+    max-height: 350px !important;
+    object-fit: cover !important;
+}
