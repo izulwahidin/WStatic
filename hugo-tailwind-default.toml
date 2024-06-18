@@ -1,0 +1,49 @@
+baseURL = "https://tuts.lol"
+title = "xxx"
+author = "Frank"
+copyright = "Wahidin"
+paginate = 20
+languageCode = "en"
+enableRobotsTXT = true
+theme = "tailwind"
+
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+
+[params]
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  keywords = ""
+  subtitle = "Just Another Blog Site"
+  jsonLD = true
+
+  contentTypeName = "posts"
+
+  [params.header]
+    logo = "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=BlazerSweater&eyeType=Happy&eyebrowType=DefaultNatural&mouthType=Twinkle&skinColor=Brown"
+
+  [params.footer]
+    since = 2023
+    poweredby = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "/posts"
+    weight = 0
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
