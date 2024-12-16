@@ -11,6 +11,6 @@
 	}
 	
 	replace {
-		uwu.web.id localhost:5885
+		upstream.web.id proxy.web.id
 	}
 }
