@@ -1,0 +1,16 @@
+{
+	order replace after encode
+}
+
+:5885 {
+	reverse_proxy https://upstream.web.id {
+		header_up Host {upstream_hostport}
+		header_up Accept-Encoding identity
+
+		header_down Location "upstream.web.id" "proxy.web.id"
+	}
+	
+	replace {
+		uwu.web.id localhost:5885
+	}
+}
