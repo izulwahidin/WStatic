@@ -1,0 +1,21 @@
+RewriteEngine On
+
+# Match any subdomain except "www"
+RewriteCond %{HTTP_HOST} ^([a-z0-9-]+)\.h3h3\.eu\.org$ [NC]
+RewriteCond %1 !^www$ [NC]
+# Check if already in subdomain folder to avoid infinite loops
+RewriteCond %{REQUEST_URI} !^/\1(/|$)
+RewriteCond %{DOCUMENT_ROOT}/%1 -d
+# Rewrite subdomain to corresponding folder
+RewriteRule ^(.*)$ /%1/$1 [L,QSA]
+
+# Optional: Redirect www subdomain to main domain
+RewriteCond %{HTTP_HOST} ^www\.h3h3\.eu\.org$ [NC]
+RewriteRule ^(.*)$ https://h3h3.eu.org/$1 [R=301,L]
+
+# Optional: Handle case where subdomain folder doesn't exist
+RewriteCond %{HTTP_HOST} ^([a-z0-9-]+)\.h3h3\.eu\.org$ [NC]
+RewriteCond %1 !^www$ [NC]
+RewriteCond %{REQUEST_URI} !^/\1(/|$)
+RewriteCond %{DOCUMENT_ROOT}/%1 !-d
+RewriteRule ^(.*)$ /404.html [L]
