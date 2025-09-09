@@ -10,7 +10,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>
-          <xsl:value-of select="$title"/> - by po.fyi
+          <xsl:value-of select="$title"/> - by w5n.my.id
         </title>
         <script src="https://cdn.tailwindcss.com"></script>
       </head>
@@ -18,7 +18,7 @@
         <section id="header" class="bg-[#f4f4f4] p-2 rounded-lg">
           <h1 class="text-3xl font-bold">
             <xsl:value-of select="$title"/>
-            <span class="text-xs"> - by po.fyi</span>
+            <span class="text-xs"> - by w5n.my.id</span>
           </h1>
           <p class="text-lg">You are viewing an auto-generated
             <acronym title="Really Simple Syndication">RSS</acronym> feed. RSS feeds allow you to stay up to date with the latest content and features you want from websites. To subscribe to it, you will need a News Reader or other similar device.
